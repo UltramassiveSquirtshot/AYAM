@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   Progetto: [
@@ -36,20 +37,28 @@ export function Footer() {
             marginBottom: 80,
           }}
         >
-          {/* Col 1 — Brand + tagline */}
+          {/* Col 1 — Logo + tagline + social */}
           <div>
-            <p
-              style={{
-                fontFamily: "var(--font-heading)",
-                fontSize: 24,
-                fontWeight: 400,
-                fontStyle: "italic",
-                color: "var(--text-on-dark)",
-                marginBottom: 16,
-              }}
+            <Link
+              href="/"
+              aria-label="Ashtanga Yoga Alessandra Monticelli — homepage"
+              style={{ display: "inline-block", lineHeight: 0, marginBottom: 24 }}
             >
-              Ashtanga
-            </p>
+              <Image
+                src="/logo.png"
+                alt="AYAM — Ashtanga Yoga Alessandra Monticelli"
+                width={80}
+                height={80}
+                style={{
+                  width: 80,
+                  height: 80,
+                  objectFit: "contain",
+                  borderRadius: "50%",
+                  opacity: 0.92,
+                }}
+              />
+            </Link>
+
             <p
               style={{
                 fontFamily: "var(--font-body)",
@@ -64,7 +73,7 @@ export function Footer() {
               Progetto editoriale e comunità dedicata all&apos;Ashtanga Vinyasa Yoga. Non una tendenza del benessere — un metodo.
             </p>
 
-            {/* Social links — minimal, hover via CSS class */}
+            {/* Social links */}
             <div style={{ display: "flex", gap: 20 }}>
               {[
                 { href: "https://youtube.com", label: "YouTube" },

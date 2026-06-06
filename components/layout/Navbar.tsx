@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -44,27 +45,37 @@ export function Navbar() {
           maxWidth: 1200,
           marginInline: "auto",
           paddingInline: 60,
-          paddingBlock: 20,
+          paddingBlock: 12,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
         }}
       >
-        {/* Logo / Wordmark */}
+        {/* Logo */}
         <Link
           href="/"
+          aria-label="Ashtanga Yoga Alessandra Monticelli — homepage"
           style={{
-            fontFamily: "var(--font-heading)",
-            fontSize: 20,
-            fontWeight: 400,
-            fontStyle: "italic",
-            color: "var(--text-on-dark)",
-            textDecoration: "none",
-            letterSpacing: "-0.01em",
-            lineHeight: 1,
+            display: "flex",
+            alignItems: "center",
+            flexShrink: 0,
+            lineHeight: 0,
           }}
         >
-          Ashtanga
+          <Image
+            src="/logo.png"
+            alt="AYAM — Ashtanga Yoga Alessandra Monticelli"
+            width={44}
+            height={44}
+            style={{
+              width: 44,
+              height: 44,
+              objectFit: "contain",
+              borderRadius: "50%",
+              /* Il logo ha già sfondo verde bosco — si fonde col navbar */
+            }}
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -89,16 +100,20 @@ export function Navbar() {
                 transition: "opacity 150ms ease",
               }}
               onMouseEnter={(e) =>
-                ((e.target as HTMLElement).style.opacity = "1")
+                ((e.currentTarget as HTMLElement).style.opacity = "1")
               }
               onMouseLeave={(e) =>
-                ((e.target as HTMLElement).style.opacity = "0.75")
+                ((e.currentTarget as HTMLElement).style.opacity = "0.75")
               }
             >
               {link.label}
             </Link>
           ))}
-          <Link href="/membership" className="btn-cta" style={{ padding: "10px 24px", fontSize: 10 }}>
+          <Link
+            href="/membership"
+            className="btn-cta"
+            style={{ padding: "10px 24px", fontSize: 10 }}
+          >
             Entra nella pratica
           </Link>
         </nav>
