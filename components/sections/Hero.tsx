@@ -16,7 +16,7 @@ export function Hero() {
         display: "flex",
         alignItems: "center",
         overflow: "hidden",
-        paddingTop: 80,
+        paddingTop: 0,
       }}
       className="section-diagonal-bottom"
     >
@@ -41,7 +41,7 @@ export function Hero() {
           maxWidth: 1200,
           marginInline: "auto",
           paddingInline: 60,
-          paddingBlock: "100px 140px",
+          paddingBlock: "160px 140px",
           width: "100%",
           position: "relative",
           zIndex: 1,

@@ -51,28 +51,33 @@ export function Navbar() {
           justifyContent: "space-between",
         }}
       >
-        {/* Logo */}
+        {/* Logo — overflow hidden + cover zooma sul medaglione crema, taglia il rettangolo verde esterno */}
         <Link
           href="/"
           aria-label="Ashtanga Yoga Alessandra Monticelli — homepage"
           style={{
             display: "flex",
             alignItems: "center",
-            flexShrink: 0,
             lineHeight: 0,
+            width: 52,
+            height: 52,
+            borderRadius: "50%",
+            overflow: "hidden",
+            flexShrink: 0,
           }}
         >
           <Image
             src="/logo.png"
             alt="AYAM — Ashtanga Yoga Alessandra Monticelli"
-            width={44}
-            height={44}
+            width={120}
+            height={120}
             style={{
-              width: 44,
-              height: 44,
-              objectFit: "contain",
-              borderRadius: "50%",
-              /* Il logo ha già sfondo verde bosco — si fonde col navbar */
+              width: "168%",
+              height: "168%",
+              objectFit: "cover",
+              objectPosition: "center 45%",
+              marginLeft: "-34%",
+              marginTop: "-26%",
             }}
             priority
           />
