@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -50,20 +49,23 @@ export function Navbar() {
           justifyContent: "space-between",
         }}
       >
-        {/* Logo — sfondo trasparente, si vede il medaglione crema su verde bosco */}
         <Link
           href="/"
           aria-label="Ashtanga Yoga Alessandra Monticelli — homepage"
-          style={{ display: "flex", alignItems: "center", lineHeight: 0, flexShrink: 0 }}
+          style={{ textDecoration: "none", flexShrink: 0 }}
         >
-          <Image
-            src="/logo.png"
-            alt="AYAM logo"
-            width={56}
-            height={56}
-            style={{ width: 56, height: 56, objectFit: "contain" }}
-            priority
-          />
+          <span
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: 18,
+              fontWeight: 300,
+              fontStyle: "italic",
+              letterSpacing: "0.01em",
+              color: "var(--text-on-dark)",
+            }}
+          >
+            AYAM
+          </span>
         </Link>
 
         {/* Desktop nav */}
