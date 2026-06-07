@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { GrainOverlay } from "@/components/ui/GrainOverlay";
 import { staggerContainer, fadeUp } from "@/components/ui/MotionConfig";
@@ -16,7 +17,6 @@ export function Hero() {
         display: "flex",
         alignItems: "center",
         overflow: "hidden",
-        paddingTop: 0,
       }}
       className="section-diagonal-bottom"
     >
@@ -41,20 +41,55 @@ export function Hero() {
           maxWidth: 1200,
           marginInline: "auto",
           paddingInline: 60,
-          paddingBlock: "160px 140px",
+          paddingTop: 140,
+          paddingBottom: 140,
           width: "100%",
           position: "relative",
           zIndex: 1,
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 80,
+          alignItems: "center",
         }}
       >
+        {/* LEFT — Logo grande */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Image
+            src="/logo.png"
+            alt="AYAM — Ashtanga Yoga Alessandra Monticelli"
+            width={420}
+            height={420}
+            style={{
+              width: "min(380px, 100%)",
+              height: "auto",
+              objectFit: "contain",
+              filter: "drop-shadow(0 8px 40px rgba(237,227,200,0.08))",
+            }}
+            priority
+          />
+        </motion.div>
+
+        {/* RIGHT — Testo + CTA */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="show"
-          style={{ maxWidth: 820 }}
         >
           {/* Overline label */}
-          <motion.p variants={fadeUp} className="text-label" style={{ color: "var(--text-accent)", marginBottom: 32 }}>
+          <motion.p
+            variants={fadeUp}
+            className="text-label"
+            style={{ color: "var(--text-accent)", marginBottom: 28 }}
+          >
             Ashtanga Vinyasa Yoga
           </motion.p>
 
@@ -63,13 +98,13 @@ export function Hero() {
             variants={fadeUp}
             style={{
               fontFamily: "var(--font-heading)",
-              fontSize: "clamp(52px, 8vw, 96px)",
+              fontSize: "clamp(48px, 6vw, 88px)",
               fontWeight: 300,
               fontStyle: "italic",
               lineHeight: 1.05,
               letterSpacing: "-0.02em",
               color: "var(--text-on-dark)",
-              marginBottom: 32,
+              marginBottom: 28,
             }}
           >
             Senza
@@ -82,12 +117,11 @@ export function Hero() {
             variants={fadeUp}
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: 18,
+              fontSize: 17,
               fontWeight: 300,
-              lineHeight: 1.7,
-              color: "rgba(237, 227, 200, 0.7)",
-              maxWidth: 520,
-              marginBottom: 56,
+              lineHeight: 1.75,
+              color: "rgba(237, 227, 200, 0.65)",
+              marginBottom: 48,
             }}
           >
             Sadhana — la pratica quotidiana. Non una filosofia da leggere, ma un corpo che si muove, respira, fatica ogni mattina.
@@ -105,37 +139,18 @@ export function Hero() {
               Leggi gli articoli
             </Link>
           </motion.div>
-        </motion.div>
 
-        {/* Bottom corner — practice count / metadata */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          style={{
-            position: "absolute",
-            bottom: 80,
-            right: 60,
-            textAlign: "right",
-          }}
-          className="hidden lg:block"
-          aria-hidden="true"
-        >
-          <p className="text-label-sm" style={{ color: "rgba(237,227,200,0.35)", marginBottom: 6 }}>
-            La sequenza è fissa
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-heading)",
-              fontSize: 48,
-              fontWeight: 300,
-              fontStyle: "italic",
-              color: "rgba(237,227,200,0.12)",
-              lineHeight: 1,
-            }}
+          {/* Decorative bottom label */}
+          <motion.div
+            variants={fadeUp}
+            style={{ marginTop: 56, display: "flex", alignItems: "center", gap: 16 }}
+            aria-hidden="true"
           >
-            Primary
-          </p>
+            <div style={{ height: 1, width: 32, background: "var(--border-on-dark)" }} />
+            <span className="text-label-sm" style={{ color: "rgba(237,227,200,0.3)" }}>
+              La sequenza è fissa
+            </span>
+          </motion.div>
         </motion.div>
       </div>
     </section>

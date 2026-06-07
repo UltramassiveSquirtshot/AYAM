@@ -42,31 +42,14 @@ export function Footer() {
             <Link
               href="/"
               aria-label="Ashtanga Yoga Alessandra Monticelli — homepage"
-              style={{
-                display: "inline-flex",
-                lineHeight: 0,
-                marginBottom: 24,
-                width: 72,
-                height: 72,
-                borderRadius: "50%",
-                overflow: "hidden",
-                flexShrink: 0,
-              }}
+              style={{ display: "inline-block", lineHeight: 0, marginBottom: 20 }}
             >
               <Image
                 src="/logo.png"
                 alt="AYAM — Ashtanga Yoga Alessandra Monticelli"
-                width={160}
-                height={160}
-                style={{
-                  width: "168%",
-                  height: "168%",
-                  objectFit: "cover",
-                  objectPosition: "center 45%",
-                  marginLeft: "-34%",
-                  marginTop: "-26%",
-                  opacity: 0.9,
-                }}
+                width={100}
+                height={100}
+                style={{ width: 100, height: 100, objectFit: "contain", opacity: 0.9 }}
               />
             </Link>
 

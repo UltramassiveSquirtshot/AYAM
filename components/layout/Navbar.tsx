@@ -30,9 +30,7 @@ export function Navbar() {
         left: 0,
         right: 0,
         zIndex: 50,
-        backgroundColor: scrolled
-          ? "rgba(0, 54, 49, 0.97)"
-          : "transparent",
+        backgroundColor: scrolled ? "rgba(0, 54, 49, 0.97)" : "transparent",
         borderBottom: scrolled
           ? "1px solid rgba(237, 227, 200, 0.1)"
           : "1px solid transparent",
@@ -45,40 +43,24 @@ export function Navbar() {
           maxWidth: 1200,
           marginInline: "auto",
           paddingInline: 60,
-          paddingBlock: 12,
+          paddingBlock: 10,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
         }}
       >
-        {/* Logo — overflow hidden + cover zooma sul medaglione crema, taglia il rettangolo verde esterno */}
+        {/* Logo — sfondo trasparente, si vede il medaglione crema su verde bosco */}
         <Link
           href="/"
           aria-label="Ashtanga Yoga Alessandra Monticelli — homepage"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            lineHeight: 0,
-            width: 52,
-            height: 52,
-            borderRadius: "50%",
-            overflow: "hidden",
-            flexShrink: 0,
-          }}
+          style={{ display: "flex", alignItems: "center", lineHeight: 0, flexShrink: 0 }}
         >
           <Image
             src="/logo.png"
-            alt="AYAM — Ashtanga Yoga Alessandra Monticelli"
-            width={120}
-            height={120}
-            style={{
-              width: "168%",
-              height: "168%",
-              objectFit: "cover",
-              objectPosition: "center 45%",
-              marginLeft: "-34%",
-              marginTop: "-26%",
-            }}
+            alt="AYAM logo"
+            width={56}
+            height={56}
+            style={{ width: 56, height: 56, objectFit: "contain" }}
             priority
           />
         </Link>
