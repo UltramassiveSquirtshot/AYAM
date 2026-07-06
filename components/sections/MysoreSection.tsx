@@ -68,7 +68,7 @@ export function MysoreSection() {
               marginBottom: 24,
             }}
           >
-            A Mysore, in India, gli studenti arrivavano ogni mattina nello shala di Pattabhi Jois. Ognuno praticava la propria sequenza al proprio ritmo. L&apos;insegnante osservava, correggeva, aggiustava — senza guidare con la voce l&apos;intera stanza.
+            A Mysore, in India, gli studenti arrivavano ogni mattina nello shala di Pattabhi Jois: ognuno praticava la propria sequenza al proprio ritmo. L&apos;insegnante osservava, correggeva, aggiustava — senza guidare l&apos;intera stanza.
           </motion.p>
 
           <motion.p
@@ -82,7 +82,7 @@ export function MysoreSection() {
               marginBottom: 24,
             }}
           >
-            Questo è il Mysore style: una classe individuale in un contesto collettivo. Non si aspetta che l&apos;insegnante dica cosa fare — lo studente conosce la sequenza. Il corpo è diventato il testo.
+            Questo è il Mysore style: una pratica individuale in un contesto collettivo. Non si aspetta che l&apos;insegnante guidi una classe, lo studente studia la sequenza per apprenderla e praticarla autonomamente.
           </motion.p>
 
           <motion.p
@@ -96,7 +96,7 @@ export function MysoreSection() {
               marginBottom: 48,
             }}
           >
-            È esattamente il contrario di una lezione condotta. E proprio per questo funziona: l&apos;attenzione è distribuita in modo equo, e la relazione tra studente e insegnante può approfondirsi nel tempo.
+            Il corpo diviene il testo. L&apos;attenzione dell&apos;insegnante è distribuita in modo equo.
           </motion.p>
 
           <motion.div variants={fadeUp}>
@@ -117,23 +117,23 @@ export function MysoreSection() {
           {[
             {
               n: "01",
-              title: "La sequenza è memorizzata",
-              body: "Lo studente conosce ogni asana e la loro progressione. Il corpo diventa autonomo.",
+              title: "La sequenza si apprende per essere memorizzata",
+              body: "Lo studente integra man mano le posizioni e la loro progressione.",
             },
             {
               n: "02",
               title: "Il ritmo è personale",
-              body: "Si pratica al proprio respiro, non a quello dell'insegnante. Non c'è una voce che comanda.",
+              body: "Si pratica al proprio respiro.",
             },
             {
               n: "03",
-              title: "L'insegnante osserva e tocca",
-              body: "Gli aggiustamenti sono fisici, specifici, individuali. La relazione si costruisce nel tempo.",
+              title: "L'insegnante osserva.",
+              body: "Gli aggiustamenti sono misurati, precisi ed individuali. La fiducia si costruisce nel tempo.",
             },
             {
               n: "04",
               title: "Si viene ogni mattina",
-              body: "Non è un'attività. È una sadhana — una disciplina quotidiana che cambia il corpo e la mente.",
+              body: "È il senso della sadhana, la disciplina quotidiana che cambia il corpo e la mente.",
             },
           ].map((item) => (
             <motion.div

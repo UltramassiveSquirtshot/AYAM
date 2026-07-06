@@ -52,7 +52,7 @@ export function Manifesto() {
               border: "none",
             }}
           >
-            &ldquo;Non esiste una pratica perfetta. Esiste la pratica di oggi, con il corpo che hai oggi, nel momento in cui ti presenti sul tappetino.&rdquo;
+            &ldquo;Non esiste una pratica perfetta. Esiste la pratica di oggi, con il corpo e la mente che hai nel momento in cui ti presenti sul tappetino.&rdquo;
           </motion.blockquote>
 
           {/* Body text */}
@@ -67,7 +67,7 @@ export function Manifesto() {
               marginBottom: 40,
             }}
           >
-            L&apos;Ashtanga Vinyasa non è una tendenza del benessere. È un metodo antico, preciso, esigente. La sequenza è fissa perché la ripetizione è lo strumento, non l&apos;ostacolo. Questo progetto esiste per chi vuole capire — non solo fare.
+            L&apos;Ashtanga Yoga non è una tendenza del benessere, ma un metodo preciso e coerente. La sequenza è fissa perché la ripetizione è lo strumento. Questo progetto esiste per chi vuole capire la pratica e praticare la comprensione.
           </motion.p>
 
           {/* Decorative rule */}

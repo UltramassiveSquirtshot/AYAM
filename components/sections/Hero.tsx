@@ -90,7 +90,7 @@ export function Hero() {
             className="text-label"
             style={{ color: "var(--text-accent)", marginBottom: 28 }}
           >
-            Ashtanga Vinyasa Yoga
+            Ashtanga Yoga
           </motion.p>
 
           {/* Display heading — Cormorant italic */}
@@ -107,9 +107,9 @@ export function Hero() {
               marginBottom: 28,
             }}
           >
-            Senza
+            Traditional
             <br />
-            Compromessi.
+            Mysore Style
           </motion.h1>
 
           {/* Sub-heading */}
@@ -124,7 +124,7 @@ export function Hero() {
               marginBottom: 48,
             }}
           >
-            Sadhana — la pratica quotidiana. Non una filosofia da leggere, ma un corpo che si muove, respira, fatica ogni mattina.
+            Sadhana — la pratica quotidiana. Un corpo che respira, si muove e studia s&eacute; stesso, ogni mattina.
           </motion.p>
 
           {/* CTA row */}
