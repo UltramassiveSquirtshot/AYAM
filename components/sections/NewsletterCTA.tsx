@@ -24,8 +24,7 @@ export function NewsletterCTA() {
       aria-labelledby="newsletter-heading"
       style={{
         background: "var(--color-hero-2)",
-        paddingBlock: "100px",
-        paddingInline: 60,
+        paddingBlock: "clamp(64px, 9vw, 100px)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -33,9 +32,8 @@ export function NewsletterCTA() {
       <GrainOverlay opacity={0.04} />
 
       <div
+        className="container-site"
         style={{
-          maxWidth: 1200,
-          marginInline: "auto",
           position: "relative",
           zIndex: 1,
         }}

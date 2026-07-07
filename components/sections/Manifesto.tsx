@@ -9,14 +9,12 @@ export function Manifesto() {
       aria-labelledby="manifesto-heading"
       style={{
         background: "var(--color-neutral-light)",
-        paddingBlock: "120px",
-        paddingInline: 60,
+        paddingBlock: "clamp(72px, 11vw, 120px)",
       }}
     >
       <div
+        className="container-site"
         style={{
-          maxWidth: 1200,
-          marginInline: "auto",
           display: "flex",
           justifyContent: "center",
         }}

@@ -37,18 +37,11 @@ export function Hero() {
       />
 
       <div
+        className="container-site grid-2col"
         style={{
-          maxWidth: 1200,
-          marginInline: "auto",
-          paddingInline: 60,
-          paddingTop: 140,
-          paddingBottom: 140,
-          width: "100%",
+          paddingBlock: "clamp(64px, 10vw, 140px)",
           position: "relative",
           zIndex: 1,
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 80,
           alignItems: "center",
         }}
       >

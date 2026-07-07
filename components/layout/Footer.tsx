@@ -23,17 +23,14 @@ export function Footer() {
       style={{
         background: "var(--color-hero-2)",
         paddingBlock: "80px 48px",
-        paddingInline: 60,
         borderTop: "1px solid var(--border-on-dark)",
       }}
     >
-      <div style={{ maxWidth: 1200, marginInline: "auto" }}>
+      <div className="container-site">
         {/* Top grid — 3 columns */}
         <div
+          className="grid-footer"
           style={{
-            display: "grid",
-            gridTemplateColumns: "1.5fr 1fr 1fr",
-            gap: 60,
             marginBottom: 80,
           }}
         >

@@ -145,11 +145,10 @@ export function RecentArticles() {
       aria-labelledby="articles-heading"
       style={{
         background: "var(--color-neutral-light)",
-        paddingBlock: "100px",
-        paddingInline: 60,
+        paddingBlock: "clamp(64px, 9vw, 100px)",
       }}
     >
-      <div style={{ maxWidth: 1200, marginInline: "auto" }}>
+      <div className="container-site">
         {/* Section header — asymmetric */}
         <motion.div
           initial="hidden"
@@ -213,12 +212,7 @@ export function RecentArticles() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 24,
-          }}
-          className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid-3col"
         >
           {articles.map((article, i) => (
             <ArticleCard key={article.slug} article={article} index={i} />

@@ -39,10 +39,8 @@ export function Navbar() {
       }}
     >
       <div
+        className="container-site"
         style={{
-          maxWidth: 1200,
-          marginInline: "auto",
-          paddingInline: 60,
           paddingBlock: 10,
           display: "flex",
           alignItems: "center",
@@ -71,8 +69,7 @@ export function Navbar() {
         {/* Desktop nav */}
         <nav
           aria-label="Navigazione principale"
-          style={{ display: "flex", gap: 40, alignItems: "center" }}
-          className="hidden md:flex"
+          className="nav-desktop"
         >
           {navLinks.map((link) => (
             <Link
@@ -110,7 +107,7 @@ export function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden"
+          className="nav-mobile-toggle"
           aria-label={menuOpen ? "Chiudi menu" : "Apri menu"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((v) => !v)}
@@ -118,7 +115,6 @@ export function Navbar() {
             background: "none",
             border: "none",
             cursor: "pointer",
-            display: "flex",
             flexDirection: "column",
             gap: 5,
             padding: 4,

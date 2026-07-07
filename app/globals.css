@@ -169,6 +169,80 @@ body {
   }
 }
 
+/* ─── Responsive grids ──────────────────────────────────────── */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 60px;
+}
+
+@media (max-width: 1024px) {
+  .grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.article-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ─── Navbar responsive toggle ──────────────────────────────── */
+.nav-desktop {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+  .nav-mobile-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2col {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .grid-3col {
+    grid-template-columns: 1fr;
+  }
+  .grid-footer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .article-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  /* On mobile the meta column aligns left with the content */
+  .article-row > * + * {
+    align-items: flex-start !important;
+  }
+}
+
 /* ─── Diagonal section transitions ──────────────────────────── */
 .section-diagonal-bottom {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 60px), 0 100%);

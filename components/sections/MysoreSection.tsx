@@ -10,19 +10,14 @@ export function MysoreSection() {
       aria-labelledby="mysore-heading"
       style={{
         background: "var(--color-hero-1)",
-        paddingBlock: "140px 160px",
-        paddingInline: 60,
+        paddingBlock: "clamp(80px, 12vw, 160px)",
         position: "relative",
       }}
       className="section-diagonal-top section-diagonal-bottom"
     >
       <div
+        className="container-site grid-2col"
         style={{
-          maxWidth: 1200,
-          marginInline: "auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 80,
           alignItems: "start",
         }}
       >
@@ -112,7 +107,7 @@ export function MysoreSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          style={{ paddingTop: 80 }}
+          style={{ paddingTop: "clamp(0px, 8vw, 80px)" }}
         >
           {[
             {

@@ -29,9 +29,9 @@ export default function ArticoloYogaQueerIndigeno() {
         <section
           style={{
             background: "var(--color-hero-2)",
-            paddingTop: 160,
-            paddingBottom: 100,
-            paddingInline: 60,
+            paddingTop: "clamp(120px, 18vw, 160px)",
+            paddingBottom: "clamp(64px, 9vw, 100px)",
+            paddingInline: "clamp(24px, 5vw, 60px)",
             position: "relative",
             overflow: "hidden",
           }}
@@ -91,8 +91,8 @@ export default function ArticoloYogaQueerIndigeno() {
         <article
           style={{
             background: "var(--color-neutral-light)",
-            paddingBlock: 100,
-            paddingInline: 60,
+            paddingBlock: "clamp(64px, 9vw, 100px)",
+            paddingInline: "clamp(24px, 5vw, 60px)",
           }}
         >
           <div

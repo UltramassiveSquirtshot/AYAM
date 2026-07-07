@@ -48,9 +48,9 @@ export default function ArticoliPage() {
         <section
           style={{
             background: "var(--color-hero-2)",
-            paddingTop: 160,
-            paddingBottom: 100,
-            paddingInline: 60,
+            paddingTop: "clamp(120px, 18vw, 160px)",
+            paddingBottom: "clamp(64px, 9vw, 100px)",
+            paddingInline: "clamp(24px, 5vw, 60px)",
             position: "relative",
             overflow: "hidden",
           }}
@@ -81,8 +81,8 @@ export default function ArticoliPage() {
         <section
           style={{
             background: "var(--color-neutral-light)",
-            paddingBlock: 100,
-            paddingInline: 60,
+            paddingBlock: "clamp(64px, 9vw, 100px)",
+            paddingInline: "clamp(24px, 5vw, 60px)",
           }}
         >
           <div style={{ maxWidth: 1200, marginInline: "auto" }}>
@@ -108,14 +108,7 @@ export default function ArticoliPage() {
                     href={`/articoli/${art.slug}`}
                     style={{ textDecoration: "none", display: "block", paddingBlock: 48 }}
                   >
-                    <article
-                      style={{
-                        display: "grid",
-                        gridTemplateColumns: "1fr auto",
-                        gap: 40,
-                        alignItems: "start",
-                      }}
-                    >
+                    <article className="article-row">
                       <div>
                         <div style={{ display: "flex", gap: 8, marginBottom: 16, flexWrap: "wrap" }}>
                           {art.tags.map((tag) => (
