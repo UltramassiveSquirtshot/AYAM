@@ -1,14 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { href: "/inizia-da-qui", label: "Inizia da qui" },
   { href: "/articoli", label: "Articoli" },
   { href: "/about", label: "Chi sono" },
-  { href: "/membership", label: "Membership" },
 ];
 
 export function Navbar() {
@@ -50,20 +49,16 @@ export function Navbar() {
         <Link
           href="/"
           aria-label="Ashtanga Yoga Alessandra Monticelli — homepage"
-          style={{ textDecoration: "none", flexShrink: 0 }}
+          style={{ display: "flex", alignItems: "center", lineHeight: 0, flexShrink: 0 }}
         >
-          <span
-            style={{
-              fontFamily: "var(--font-heading)",
-              fontSize: 18,
-              fontWeight: 300,
-              fontStyle: "italic",
-              letterSpacing: "0.01em",
-              color: "var(--text-on-dark)",
-            }}
-          >
-            AYAM
-          </span>
+          <Image
+            src="/logo-nav.png"
+            alt="AYAM logo"
+            width={60}
+            height={60}
+            style={{ width: 60, height: 60, objectFit: "contain", display: "block" }}
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -96,13 +91,6 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/membership"
-            className="btn-cta"
-            style={{ padding: "10px 24px", fontSize: 10 }}
-          >
-            Entra nella pratica
-          </Link>
         </nav>
 
         {/* Mobile hamburger */}
@@ -179,14 +167,6 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/membership"
-              className="btn-cta"
-              onClick={() => setMenuOpen(false)}
-              style={{ alignSelf: "flex-start", padding: "12px 28px" }}
-            >
-              Entra nella pratica
-            </Link>
           </motion.div>
         )}
       </AnimatePresence>

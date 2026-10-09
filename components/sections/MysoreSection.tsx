@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeUp, fadeUpSlow } from "@/components/ui/MotionConfig";
 
@@ -93,12 +92,6 @@ export function MysoreSection() {
           >
             Il corpo diviene il testo. L&apos;attenzione dell&apos;insegnante è distribuita in modo equo.
           </motion.p>
-
-          <motion.div variants={fadeUp}>
-            <Link href="/inizia-da-qui" className="btn-cta">
-              Scopri come iniziare
-            </Link>
-          </motion.div>
         </motion.div>
 
         {/* Right — numbered list / principles */}

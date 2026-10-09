@@ -125,9 +125,6 @@ export function Hero() {
             variants={fadeUp}
             style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}
           >
-            <Link href="/inizia-da-qui" className="btn-cta">
-              Inizia da qui
-            </Link>
             <Link href="/articoli" className="btn-ghost">
               Leggi gli articoli
             </Link>

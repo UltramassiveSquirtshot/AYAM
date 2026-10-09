@@ -3,9 +3,7 @@ import Image from "next/image";
 
 const footerLinks = {
   Progetto: [
-    { href: "/inizia-da-qui", label: "Inizia da qui" },
     { href: "/articoli", label: "Articoli" },
-    { href: "/membership", label: "Membership" },
     { href: "/about", label: "Chi sono" },
   ],
   Pratica: [
@@ -61,7 +59,7 @@ export function Footer() {
                 marginBottom: 32,
               }}
             >
-              Progetto editoriale e comunità dedicata all&apos;Ashtanga Vinyasa Yoga. Non una tendenza del benessere — un metodo.
+              Progetto editoriale e comunità dedicata all&apos;Ashtanga Yoga. Non una tendenza del benessere — un metodo.
             </p>
 
             {/* Social links */}

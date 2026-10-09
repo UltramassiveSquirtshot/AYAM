@@ -30,13 +30,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Ashtanga — Senza Compromessi",
+  title: "AYAM",
   description:
-    "Progetto editoriale e comunità dedicata all'Ashtanga Vinyasa Yoga. Sadhana, respiro, regolarità, fatica onesta.",
+    "Progetto editoriale e comunità dedicata all'Ashtanga Yoga. Sadhana, respiro, regolarità, fatica onesta.",
   openGraph: {
-    title: "Ashtanga — Senza Compromessi",
+    title: "AYAM",
     description:
-      "Progetto editoriale e comunità dedicata all'Ashtanga Vinyasa Yoga.",
+      "Progetto editoriale e comunità dedicata all'Ashtanga Yoga.",
     locale: "it_IT",
     type: "website",
   },

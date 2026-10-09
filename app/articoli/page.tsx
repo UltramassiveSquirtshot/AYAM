@@ -2,17 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { SkipLink } from "@/components/ui/SkipLink";
 import { GrainOverlay } from "@/components/ui/GrainOverlay";
 
 export const metadata: Metadata = {
-  title: "Articoli — Ashtanga Senza Compromessi",
+  title: "Articoli — AYAM",
   description:
-    "Riflessioni sulla pratica Ashtanga Vinyasa Yoga, filosofia, metodo, ricerca. Scritti da Alessandra Monticelli.",
+    "Riflessioni sulla pratica Ashtanga Yoga, filosofia, metodo, ricerca. Scritti da Alessandra Monticelli.",
   openGraph: {
-    title: "Articoli — Ashtanga Senza Compromessi",
+    title: "Articoli — AYAM",
     description:
-      "Riflessioni sulla pratica Ashtanga Vinyasa Yoga, filosofia, metodo, ricerca.",
+      "Riflessioni sulla pratica Ashtanga Yoga, filosofia, metodo, ricerca.",
     locale: "it_IT",
     type: "website",
   },
@@ -40,7 +39,6 @@ const articoli = [
 export default function ArticoliPage() {
   return (
     <>
-      <SkipLink />
       <Navbar />
 
       <main id="main-content">
