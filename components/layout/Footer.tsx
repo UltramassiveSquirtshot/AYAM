@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const footerLinks = {
   Progetto: [
+    { href: "/inizia-la-pratica", label: "Inizia la pratica" },
     { href: "/articoli", label: "Articoli" },
     { href: "/about", label: "Chi sono" },
   ],
@@ -159,7 +160,7 @@ export function Footer() {
             className="text-label-sm"
             style={{ color: "rgba(237,227,200,0.25)", margin: 0 }}
           >
-            © {new Date().getFullYear()} Ashtanga — Senza Compromessi
+            © {new Date().getFullYear()} AYAM — Ashtanga Yoga Alessandra Monticelli
           </p>
         </div>
       </div>
